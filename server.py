@@ -143,7 +143,7 @@ def guardrail_pergunta(prompt: str) -> str:
                 return f"Data inválida: {data_str}. Use o formato correto dd/mm/aaaa."
     elif "previsão" in prompt.lower() or "tempo" in prompt.lower():
         # Se for uma pergunta sobre previsão e não houver data
-        return "Por favor, informe a data no formato dd/mm/aaaa."
+        return "⚠️ Por favor, informe a data no formato dd/mm/aaaa."
     
     return "OK"
 
@@ -169,5 +169,4 @@ def guardrail_resposta(resposta: str) -> str:
 
 if __name__ == "__main__":
     print("MCP run")
-
     mcp.run()
